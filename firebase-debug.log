@@ -1,0 +1,41 @@
+[debug] [2024-10-02T06:10:58.228Z] ----------------------------------------------------------------------
+[debug] [2024-10-02T06:10:58.233Z] Command:       /usr/local/bin/node /Users/moh2024/.npm-global/bin/firebase init
+[debug] [2024-10-02T06:10:58.234Z] CLI Version:   13.20.2
+[debug] [2024-10-02T06:10:58.234Z] Platform:      darwin
+[debug] [2024-10-02T06:10:58.235Z] Node Version:  v20.17.0
+[debug] [2024-10-02T06:10:58.235Z] Time:          Wed Oct 02 2024 09:10:58 GMT+0300 (Arabian Standard Time)
+[debug] [2024-10-02T06:10:58.235Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-02T06:10:58.246Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-02T06:10:58.246Z] > authorizing via signed-in user (msbas001@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/moh2024/Documents/patient-data-tracker
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-10-02T06:11:46.692Z] Checked if tokens are valid: true, expires at: 1727852935820
+[debug] [2024-10-02T06:11:46.692Z] Checked if tokens are valid: true, expires at: 1727852935820
+[debug] [2024-10-02T06:11:46.694Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-10-02T06:11:46.695Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"patient-data-tracker","name":"patient-data-tracker"}
+[debug] [2024-10-02T06:11:47.499Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 409
+[debug] [2024-10-02T06:11:47.499Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2024-10-02T06:11:47.872Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at responseToError (/Users/moh2024/.npm-global/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/Users/moh2024/.npm-global/lib/node_modules/firebase-tools/lib/apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID patient-data-tracker. Please try again with a unique project ID.
